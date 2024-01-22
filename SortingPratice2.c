@@ -23,8 +23,6 @@ int printArray(int *arr, int size)
 
 
 
-<<<<<<< HEAD
-=======
 int mergeSort(int *arr, int size, int *lsa, int lsasize, int *rsa, int rsasize)
 {
 	int i=0,j=0,k=0;
@@ -93,7 +91,6 @@ int merge_sort(int *arr, int size)
 
     mergeSort(arr,size,lsa,mid,rsa,(size-mid));
 }
->>>>>>> merge-sort-feature
 
 int main()
 {
@@ -101,8 +98,6 @@ int main()
 
     int size = sizeof(arr) / sizeof(arr[0]);
 
-<<<<<<< HEAD
-=======
     
     printf("Merge Sort Array\n");
 
@@ -110,7 +105,6 @@ int main()
 
     printArray(arr,size);
 
->>>>>>> merge-sort-feature
 
     return 0;
 }
