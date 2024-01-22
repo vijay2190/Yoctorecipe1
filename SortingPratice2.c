@@ -99,7 +99,7 @@ int main()
     int size = sizeof(arr) / sizeof(arr[0]);
 
     
-    printf("Merge Sort\n");
+    printf("Merge Sort Array\n");
 
     merge_sort(arr,size);
 
