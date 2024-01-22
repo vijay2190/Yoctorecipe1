@@ -91,6 +91,46 @@ int merge_sort(int *arr, int size)
 
     mergeSort(arr,size,lsa,mid,rsa,(size-mid));
 }
+int partition(int *arr, int low, int high)
+{
+    int pivot = low, p = low+1, q = high;
+
+    while(p <= q)
+    {
+        while(arr[p] < arr[pivot])
+        {
+            p++;
+        }
+
+        while(arr[q] > arr[pivot])
+        {
+            q--;
+        }
+
+        if(p < q)
+            swap(&arr[p],&arr[q]);
+    }
+
+    int temp = arr[q];
+    arr[q] = arr[pivot];
+    arr[pivot] = temp;
+
+
+return q;
+}
+int quickSort(int *arr, int low, int high)
+{
+    if(low < high)
+    {
+        int index = partition(arr, low, high);
+        quickSort(arr, low, index-1);
+        quickSort(arr, index+1,high);
+    }
+
+return 0;
+}
+
+
 
 int main()
 {
@@ -104,6 +144,10 @@ int main()
     merge_sort(arr,size);
 
     printArray(arr,size);
+
+    quickSort(arr,0,size-1);
+    printArray(arr,size);
+
 
 
     return 0;
