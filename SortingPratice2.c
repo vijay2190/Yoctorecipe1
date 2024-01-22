@@ -71,6 +71,7 @@ int main()
 
     int size = sizeof(arr) / sizeof(arr[0]);
 
+    printf("Before Sorting\n");
 
     quickSort(arr,0,size-1);
 
