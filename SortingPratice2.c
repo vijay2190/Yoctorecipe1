@@ -52,10 +52,6 @@ int mergeSort(int *arr, int size, int *lsa, int lsasize, int *rsa, int rsasize)
 	    j++,k++;
 	}
 
-
-	free(lsa);
-	free(rsa);
-
 }
 
 
